@@ -1,0 +1,38 @@
+
+    <div class="card">
+        <div class="card-header">
+            <h4>Lista de Personas Creadas</h4>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table id="userList" class="table table-bordered table-hover table-striped">
+                    <thead class="thead-light">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombres</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">Documento</th>
+                        <th scope="col">E-mail</th>
+                        <th>Editar</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr  *ngFor="let item of this.list_dataPersona">
+                        <th scope="row">{{item.nmid}}</th>
+                        <td>{{item.dsnombres}}</td>
+                        <td>{{item.dsapellidos}}</td>
+                        <td>{{item.cddocumento}}</td>
+                        <td>{{item.dsemail}}</td>
+                        <td>
+                            <a data-toggle="modal" data-target="#exampleModal" (click)="editar(item)"><i class="fas fa-edit"></i></a> 
+                        </td>
+                        
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+           
+        </div>
+    </div>
+   
+

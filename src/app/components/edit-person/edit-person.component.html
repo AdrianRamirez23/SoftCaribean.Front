@@ -1,0 +1,88 @@
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form class="form" role="form" autocomplete="off">
+                <div class="form-group row">
+                    <label class="col-lg-3 col-form-label form-control-label">Nombres</label>
+                    <div class="col-lg-9">
+                        <input class="form-control" type="text" [(ngModel)]="nombres" name="nombres">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-3 col-form-label form-control-label">Apellidos</label>
+                    <div class="col-lg-9">
+                        <input class="form-control" type="text" [(ngModel)]="this.apellidos" name="apellidos">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-3 col-form-label form-control-label">Email</label>
+                    <div class="col-lg-9">
+                        <input class="form-control" type="email" [(ngModel)]="this.email" name="email">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-3 col-form-label form-control-label">Documento</label>
+                    <div class="col-lg-9">
+                        <input class="form-control" type="email" [(ngModel)]="this.doc" name="doc" [disabled]="true">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-3 col-form-label form-control-label">Fecha Nacimiento</label>
+                    <div class="col-lg-9">
+                        <input class="form-control" type="text" [(ngModel)]="this.FechN " name="FechN" [disabled]="true">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-3 col-form-label form-control-label">Tipo Persona</label>
+                    <div class="col-lg-9">
+                        <select class="form-select form-control" aria-label="Default select example" [(ngModel)]="this.pers" name="pers">
+                            <option selected disabled>Seleccione un Estado</option>
+                            <option value='{{ item.cddato }}' *ngFor="let item of this.list_pesona">{{ item.cadato1 }}</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-3 col-form-label form-control-label">Genero</label>
+                    <div class="col-lg-9">
+                        <select class="form-select form-control" aria-label="Default select example" [(ngModel)]="this.gen" name="gen" >
+                            <option selected disabled>Seleccione un Estado</option>
+                            <option value='{{ item.cddato }}' *ngFor="let item of this.list_genero">{{ item.cadato1 }}</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-3 col-form-label form-control-label">Dirección</label>
+                    <div class="col-lg-9">
+                        <input class="form-control" type="text" [(ngModel)]="this.dir" name="dir">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-3 col-form-label form-control-label">Telefono Fijo</label>
+                    <div class="col-lg-9">
+                        <input class="form-control" type="number" [(ngModel)]="this.telfijo" name="telfijo">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-3 col-form-label form-control-label">Telefono Móvil</label>
+                    <div class="col-lg-9">
+                        <input class="form-control" type="number" [(ngModel)]="this.telMovil" name="telMovil" >
+                    </div>
+                </div>
+              
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Editar</button>
+        </div>
+      </div>
+    </div>
+  </div>

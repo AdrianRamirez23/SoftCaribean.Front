@@ -1,0 +1,82 @@
+<div class="card">
+    <div class="card-header">
+        <h4>Crear Persona</h4>
+    </div>
+    <div class="card-body">
+        <form class="form" role="form" autocomplete="off">
+            <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Nombres</label>
+                <div class="col-lg-9">
+                    <input class="form-control" type="text" [(ngModel)]="nombres" name="nombres">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Apellidos</label>
+                <div class="col-lg-9">
+                    <input class="form-control" type="text" [(ngModel)]="this.apellidos" name="apellidos">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Email</label>
+                <div class="col-lg-9">
+                    <input class="form-control" type="email" [(ngModel)]="this.email" name="email">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Documento</label>
+                <div class="col-lg-9">
+                    <input class="form-control" type="email" [(ngModel)]="this.doc" name="doc">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Fecha Nacimiento</label>
+                <div class="col-lg-9">
+                    <input class="form-control" type="date" [(ngModel)]="this.FechN" name="FechN">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Tipo Persona</label>
+                <div class="col-lg-9">
+                    <select class="form-select form-control" aria-label="Default select example" [(ngModel)]="this.pers" name="pers">
+                        <option selected disabled>Seleccione un Estado</option>
+                        <option value='{{ item.cddato }}' *ngFor="let item of this.list_pesona">{{ item.cadato1 }}</option>
+                      </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Genero</label>
+                <div class="col-lg-9">
+                    <select class="form-select form-control" aria-label="Default select example" [(ngModel)]="this.gen" name="gen" >
+                        <option selected disabled>Seleccione un Estado</option>
+                        <option value='{{ item.cddato }}' *ngFor="let item of this.list_genero">{{ item.cadato1 }}</option>
+                      </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Dirección</label>
+                <div class="col-lg-9">
+                    <input class="form-control" type="text" [(ngModel)]="this.dir" name="dir">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Telefono Fijo</label>
+                <div class="col-lg-9">
+                    <input class="form-control" type="number" [(ngModel)]="this.telfijo" name="telfijo">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Telefono Móvil</label>
+                <div class="col-lg-9">
+                    <input class="form-control" type="number" [(ngModel)]="this.telMovil" name="telMovil" >
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-12 text-center">
+                    <a  class="btn btn-secondary" reset >Cancelar</a>
+                    <a type="button" class="btn btn-primary" (click)="guardarInfo()">Guiardar</a>
+                        
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
