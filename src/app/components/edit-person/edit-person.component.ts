@@ -38,6 +38,7 @@ export class EditPersonComponent implements OnInit {
     
   }
   cargarDatos(){
+    
     this.nombres = this.item.dsnombres;
     this.apellidos = this.item.dsapellidos;
     this.email = this.item.dsemail;
@@ -95,6 +96,7 @@ editarDatos(){
   }
 
   let perso = new Persona();
+  perso.Nmid = this.item.nmid;
   perso.Dsnombres = this.nombres;
   perso.Dsapellidos = this.apellidos;
   perso.Dsemail = this.email;
